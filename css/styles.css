@@ -63,9 +63,17 @@ img {
 }
 
 .hidden {
-  visibility: hidden;
-  pointer-events: none;
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section {
@@ -310,12 +318,6 @@ ___  _  _ ___ ___ ____ _  _ ____
   888   "   888 888  888 888 888  888
   888       888 "Y888888 888 888  888
 */
-.main {
-  width: 1600px;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /*
 _  _ ____ ____ ____
@@ -333,7 +335,7 @@ _  _ ____ ____ ____
   background-position: 50% 50%;
   background-size: cover;
   max-width: 1600px;
-  align-items: center;
+  margin: 0 auto;
   text-align: center;
 }
 
