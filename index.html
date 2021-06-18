@@ -91,7 +91,19 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button">Заказать услугу</button>
+          <button class="button" type="button" data-open-modal>
+            Заказать услугу
+          </button>
+        </div>
+
+        <div class="backdrop is-hidden" data-backdrop>
+          <div class="modal">
+            <button class="button-close" type="button" data-close-modal>
+              <svg class="cross-icon">
+                <use href="./images/icons/sprites.svg#cross"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -453,5 +465,27 @@
         </section>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', tongleModal);
+      refs.closeModalBtn.addEventListener('click', tongleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function tongleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('backdrop click');
+      }
+    </script>
   </body>
 </html>
