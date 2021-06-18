@@ -157,6 +157,7 @@ _  _ ____ ____ ___  ____ ____
 
 /* Site nav */
 .menu__link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -171,6 +172,28 @@ _  _ ____ ____ ___  ____ ____
 .menu__link:hover,
 .menu__link:focus {
   color: var(--accent);
+}
+
+/* Blue bar */
+.menu__link::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  content: '';
+  background-color: var(--accent);
+  transition: opacity 250ms var(--cubic);
+  opacity: 0;
+}
+
+.menu__link.current::after,
+.menu__link:hover:after {
+  opacity: 1;
 }
 
 /*
