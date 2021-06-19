@@ -417,7 +417,7 @@ _  _ ____ ____ ____
   height: 581px;
 
   opacity: 0;
-  transition: opacity 1000ms var(--cubic), transform 1000ms var(--cubic);
+  transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
 
   background: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
