@@ -2,17 +2,13 @@ const refs = {
   openModalBtn: document.querySelector('[data-open-modal]'),
   closeModalBtn: document.querySelector('[data-close-modal]'),
   backdrop: document.querySelector('[data-backdrop]'),
+  modal: document.querySelector('[data-modal]'),
 };
 
 refs.openModalBtn.addEventListener('click', tongleModal);
 refs.closeModalBtn.addEventListener('click', tongleModal);
 
-refs.backdrop.addEventListener('click', logBackdropClick);
-
 function tongleModal() {
   refs.backdrop.classList.toggle('is-hidden');
-}
-
-function logBackdropClick() {
-  console.log('backdrop click');
+  refs.modal.classList.toggle('active');
 }
