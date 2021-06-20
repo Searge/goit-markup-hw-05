@@ -162,6 +162,7 @@ _  _ ____ ____ ___  ____ ____
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--title-text-color);
+  transition: color 250ms var(--cubic);
   text-decoration: none;
   font-weight: 500;
   line-height: 1.14;
@@ -234,12 +235,12 @@ ____ ____ _  _ ___ ____ ____ ___ ____
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--primary-text-color);
+  transition: color 250ms var(--cubic);
 }
 
 .contacts__link:hover,
 .contacts__link:focus {
   color: var(--accent);
-  transition: opacity 250ms var(--cubic);
 }
 
 /*
@@ -270,12 +271,12 @@ ____ ____ ____ ___ ____ ____
 
 .footer.contacts__link {
   color: var(--footer-links-color);
+  transition: color 250ms var(--cubic);
 }
 
-.contacts__link:hover,
-.contacts__link:focus {
+.footer.contacts__link:hover,
+.footer.contacts__link:focus {
   color: var(--accent);
-  transition: opacity 250ms var(--cubic);
 }
 
 .footer.contacts__item {
@@ -309,6 +310,7 @@ _| |__| | | \|
 
 .join.social__link {
   background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bg-color);
 }
 
 /*
@@ -332,13 +334,12 @@ ___  _  _ ___ ___ ____ _  _ ____
   letter-spacing: 0.06em;
   text-decoration: none;
   cursor: pointer;
+  transition: box-shadow 250ms var(--cubic);
 }
 
 .button:hover,
 .button:focus {
-  transition-duration: 0.4s;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  transition: opacity 250ms var(--cubic);
 }
 
 /*
@@ -607,14 +608,13 @@ _ ____ ____ _  _ ____
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--border);
+  color: var(--ternary-buttons);
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
 }
 .social__link:hover,
 .social__link:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent);
-
-  transition: opacity 250ms var(--cubic);
 }
 
 .social-icon {
@@ -650,9 +650,10 @@ ___  ____ ____ ___ _  _ ____ ____ ____
   align-items: center;
   width: 170px;
   height: 90px;
-  border: 1px solid var(--ternary-buttons);
   border-radius: 4px;
+  border: 1px solid var(--ternary-buttons);
   color: var(--ternary-buttons);
+  transition: color 250ms var(--cubic), border-color 250ms var(--cubic);
   margin: 0;
 }
 
@@ -660,8 +661,6 @@ ___  ____ ____ ___ _  _ ____ ____ ____
 .partners__link:focus {
   color: var(--accent);
   border-color: var(--accent);
-
-  transition: opacity 250ms var(--cubic);
 }
 
 .partner-icon {
@@ -710,6 +709,7 @@ ____ _ _    ___ ____ ____
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .filter__btn.active,
@@ -719,8 +719,6 @@ ____ _ _    ___ ____ ____
   color: var(--primary-bg-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-
-  transition: opacity 250ms var(--cubic);
 }
 
 /*
@@ -743,6 +741,7 @@ ___  ____ ____  _ ____ ____ ___ ____
 }
 
 .project__item:hover {
+  transition: box-shadow 250ms var(--cubic);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -796,15 +795,12 @@ ___
   transform: translateY(100%);
   opacity: 1;
 
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic),
-    box-shadow 250ms var(--cubic);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .project__item:hover .full-description {
   transform: translateY(0);
   opacity: 1;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
-    0 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .project-about {
