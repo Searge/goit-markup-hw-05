@@ -429,8 +429,6 @@ _  _ ____ ____ ____
 .modal.active {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  /* TODO: Find out why code doesn't work below */
-  /* transition: opacity 2500ms var(--cubic), scale(1) 2500ms var(--cubic); */
 }
 
 .button-close {
